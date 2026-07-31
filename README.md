@@ -87,4 +87,35 @@ To build an AI-powered sustainable fashion marketplace that encourages clothing 
 - Limited development time.
 - Limited API usage.
 - Budget limitations.
-- Image quality may affect AI accuracy.
+- Image quality may affect AI accuracy.## Branching Strategy
+
+This project follows GitHub Flow.
+
+Branches:
+- main
+- feature-documentation
+- feature-ui
+
+Each developer works on a separate feature branch and merges changes into the main branch using Pull Requests.
+
+---
+
+## Quick Start – Local Development
+
+1. Clone the repository.
+2. Install the required dependencies.
+3. Start the backend server.
+4. Start the frontend server.
+5. Open the application in a web browser.
+
+---
+
+## Local Development Tools
+
+- GitHub
+- Git
+- Visual Studio Code
+- Docker Desktop
+- Figma
+- Draw.io
+- Python
