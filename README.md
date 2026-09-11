@@ -1,121 +1,210 @@
-# ReWear AI
+# ReWear Web App
 
-## Project Overview
+ReWear is a web application developed to promote the reuse of clothes. Users can create accounts, browse clothing items, upload clothing listings, and manage their profiles and listings.
 
-ReWear AI is an AI-powered Sustainable Fashion Exchange Platform that enables users to buy, sell, rent, exchange, and donate pre-owned clothing within a trusted community. The platform promotes sustainable fashion while reducing textile waste by integrating AI-powered clothing recognition and smart price recommendations.
+## Features
 
----
+- User Signup and Login
+- Browse clothing items
+- Upload clothing listings
+- View and manage personal listings
+- User Profile
+- Chat functionality
+- Simple and user-friendly interface
 
-## Problem Statement
+## Technology Stack
 
-Fast fashion generates enormous textile waste, while many wearable clothes remain unused in wardrobes. Existing online marketplaces primarily support buying and selling, but they rarely encourage renting, exchanging, donating, or tracking sustainability. ReWear AI aims to provide a single platform that promotes affordable fashion and environmentally responsible consumption.
+| Technology | Purpose |
+|---|---|
+| HTML | Structure of web pages |
+| CSS | Styling and layout |
+| JavaScript | Client-side functionality |
+| Node.js | Backend and server-side functionality |
+| SQLite | Database management |
+| Figma | User interface design |
 
----
+## Project Structure
 
-## Target Users
+```text
+ReWear/
+│
+├── Design/
+│   ├── 1swe.jpeg
+│   ├── 2swe.jpeg
+│   ├── 3swe.jpeg
+│   ├── 4swe.jpeg
+│   ├── 5swe.jpeg
+│   ├── 6swe.jpeg
+│   └── Figma
+│
+├── architecture/
+│   ├── .gitkeep
+│   └── WhatsApp Image 2026-09-12 at 2.51.16 AM.jpeg
+│
+├── backend/
+│   ├── .gitkeep
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
+│
+├── database/
+│   ├── .gitkeep
+│   └── 1789158084991-Screenshot 2026-09-12 001347.png
+│
+├── docker/
+│
+├── docs/
+│
+├── frontend/
+│   ├── .gitkeep
+│   ├── chat.html
+│   ├── index.html
+│   ├── login.html
+│   ├── my-listings.html
+│   ├── profile.html
+│   ├── signup.html
+│   ├── upload.html
+│   └── screenshots/
+│
+├── wireframes/
+│
+└── .gitignore
+```
 
-### Student
-- Buy affordable clothes
-- Sell unused clothes
-- Rent clothes for special occasions
-- Exchange clothes with others
+# Software Design
 
-### Seller
-- List clothing items
-- Manage inventory
-- Track orders
+## 1. Design Principles
 
-### NGO
-- Receive donated clothes
-- Manage donation requests
+The ReWear application follows the following design principles:
 
-### Admin
-- Verify listings
-- Manage users
-- Remove fake listings
-- Generate reports
+### Abstraction
 
----
+The system hides the internal backend and database operations from the user. Users interact with the application through simple web pages and forms.
 
-## Vision Statement
+### Modularity
 
-To build an AI-powered sustainable fashion marketplace that encourages clothing reuse, minimizes textile waste, and provides users with a secure and intelligent platform for buying, selling, renting, exchanging, and donating clothes.
+The project is divided into separate parts such as frontend, backend, database, architecture, documentation, and design files. This makes the project easier to manage and update.
 
----
+### Cohesion
 
-## Key Features
+Each part of the application has a specific purpose. For example, the frontend contains the user interface pages, while the backend contains server-side functionality.
 
-- User Registration & Login
-- Buy Clothing
-- Sell Clothing
-- Rent Clothing
-- Exchange Clothing
-- Donate Clothing
-- AI Clothing Recognition
-- AI Price Recommendation
-- Wishlist
-- Chat System
-- Ratings & Reviews
-- QR Verification
-- Sustainability Dashboard
-- Notifications
-- Admin Dashboard
+### Low Coupling
 
----
+The frontend and backend are kept as separate parts of the system. The frontend communicates with the backend when data or server-side operations are required.
 
-## Success Metrics
+## 2. High-Level Architecture
 
-- Number of registered users
-- Number of successful transactions
-- Number of donated clothes
-- User satisfaction
-- Estimated reduction in textile waste
+ReWear follows a client-server based architecture.
 
----
+### Architecture Diagram
 
-## Assumptions
+![ReWear Architecture](architecture/WhatsApp%20Image%202026-09-12%20at%202.51.16%20AM.jpeg)
 
-- Users upload genuine clothing images.
-- Internet connectivity is available.
-- AI predictions are reasonably accurate.
-- Users follow platform policies.
+The architecture diagram shows the main components of the ReWear application and their interaction.
 
----
+The editable/source architecture files are maintained in the `architecture/` folder.
 
-## Constraints
+## 3. User Interface Design
 
-- Limited development time.
-- Limited API usage.
-- Budget limitations.
-- Image quality may affect AI accuracy.## Branching Strategy
+The user interface was designed using Figma. The six UI screens are stored in the `Design/` folder.
 
-This project follows GitHub Flow.
+### Screen 1
 
-Branches:
-- main
-- feature-documentation
-- feature-ui
+![ReWear UI Screen 1](Design/1swe.jpeg)
 
-Each developer works on a separate feature branch and merges changes into the main branch using Pull Requests.
+### Screen 2
 
----
+![ReWear UI Screen 2](Design/2swe.jpeg)
 
-## Quick Start – Local Development
+### Screen 3
 
-1. Clone the repository.
-2. Install the required dependencies.
-3. Start the backend server.
-4. Start the frontend server.
-5. Open the application in a web browser.
+![ReWear UI Screen 3](Design/3swe.jpeg)
 
----
+### Screen 4
 
-## Local Development Tools
+![ReWear UI Screen 4](Design/4swe.jpeg)
 
-- GitHub
-- Git
-- Visual Studio Code
-- Docker Desktop
-- Figma
-- Draw.io
-- Python
+### Screen 5
+
+![ReWear UI Screen 5](Design/5swe.jpeg)
+
+### Screen 6
+
+![ReWear UI Screen 6](Design/6swe.jpeg)
+
+The interface uses clear navigation, simple forms, consistent buttons, and a clean layout so that users can easily access the main features of the application.
+
+## 4. Main Design Decisions
+
+- **Simple and clean interface:** The UI is designed to make the main functions easy to understand.
+- **Consistent design:** Similar colors, buttons, and layouts are used across the different screens.
+- **Separate frontend and backend:** The frontend handles the user interface while the backend handles server-side operations.
+- **Separate modules:** Frontend, backend, database, design, and documentation are organized separately.
+- **Clear navigation:** Users can easily move between the main sections of the application.
+
+## 5. GitHub Design Files
+
+The repository contains the software design materials in separate folders.
+
+- `Design/` contains the Figma UI screenshots.
+- `architecture/` contains the architecture diagram.
+- `docs/` contains project documentation.
+- `wireframes/` contains the wireframe-related files.
+
+## 6. Frontend
+
+The frontend contains the main pages of the ReWear application:
+
+- `index.html` - Home page
+- `login.html` - Login page
+- `signup.html` - Signup page
+- `profile.html` - User profile
+- `upload.html` - Upload clothing
+- `my-listings.html` - User listings
+- `chat.html` - Chat functionality
+
+## 7. Backend
+
+The backend is implemented using Node.js.
+
+The main backend files are located in the `backend/` folder:
+
+```text
+backend/
+├── package.json
+├── package-lock.json
+└── server.js
+```
+
+## 8. Database
+
+The project uses SQLite for storing application data.
+
+Database-related files and supporting material are maintained in the `database/` folder.
+
+## Setup and Running
+
+1. Install Node.js.
+2. Clone or download the ReWear repository.
+3. Open the project in VS Code.
+4. Open the terminal in the `backend/` folder.
+5. Install the required packages:
+
+```bash
+npm install
+```
+
+6. Start the server:
+
+```bash
+node server.js
+```
+
+7. Open the application in a web browser using the local server address.
+
+## Current Project Status
+
+The current ReWear Web App contains the frontend pages, Node.js backend, database-related files, UI designs, architecture diagram, documentation, and wireframes.
+
+The project is organized into separate folders to make the code and design materials easier to manage.
