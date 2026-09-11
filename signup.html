@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | ReWear AI</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf8f0,
+                    #dff1e6
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #17382c;
+
+            padding: 20px;
+
+        }
+
+
+        /* MAIN BOX */
+
+        .container {
+
+            width: 900px;
+
+            min-height: 570px;
+
+            background: white;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            box-shadow:
+                0 25px 70px
+                rgba(30, 80, 55, 0.15);
+
+        }
+
+
+        /* LEFT SIDE */
+
+        .left {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #1c6549,
+                    #2b8c64
+                );
+
+            color: white;
+
+            padding: 55px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+        }
+
+
+        .logo {
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            margin-bottom: 65px;
+
+        }
+
+
+        .logo span {
+
+            color: #c8ead5;
+
+        }
+
+
+        .left h1 {
+
+            font-size: 42px;
+
+            line-height: 1.15;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .left h1 span {
+
+            color: #bfe6cc;
+
+        }
+
+
+        .left p {
+
+            color: #d8eee1;
+
+            line-height: 1.7;
+
+            font-size: 15px;
+
+        }
+
+
+        .eco {
+
+            margin-top: 35px;
+
+            font-size: 42px;
+
+        }
+
+
+        /* RIGHT SIDE */
+
+        .right {
+
+            padding: 50px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+        }
+
+
+        .right h2 {
+
+            font-size: 31px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .subtitle {
+
+            color: #718179;
+
+            font-size: 14px;
+
+            margin-bottom: 27px;
+
+        }
+
+
+        /* FORM */
+
+        form {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 13px;
+
+        }
+
+
+        label {
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-top: 2px;
+
+        }
+
+
+        input {
+
+            width: 100%;
+
+            padding: 12px 14px;
+
+            border: 1px solid #d3e1d8;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 14px;
+
+        }
+
+
+        input:focus {
+
+            border-color: #2b8c64;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(43, 140, 100, 0.1);
+
+        }
+
+
+        /* TERMS */
+
+        .terms {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-top: 5px;
+
+            font-size: 12px;
+
+            color: #718179;
+
+        }
+
+
+        .terms input {
+
+            width: auto;
+
+        }
+
+
+        .terms a {
+
+            color: #23865c;
+
+            text-decoration: none;
+
+        }
+
+
+        /* SIGN UP BUTTON */
+
+        .signup-btn {
+
+            background: #23865c;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            padding: 14px;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            margin-top: 7px;
+
+        }
+
+
+        .signup-btn:hover {
+
+            background: #1c704d;
+
+        }
+
+
+        /* DIVIDER */
+
+        .divider {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 20px 0;
+
+            color: #9aa9a1;
+
+            font-size: 12px;
+
+        }
+
+
+        .divider::before,
+        .divider::after {
+
+            content: "";
+
+            height: 1px;
+
+            background: #e2ebe5;
+
+            flex: 1;
+
+        }
+
+
+        /* GOOGLE */
+
+        .google {
+
+            width: 100%;
+
+            padding: 11px;
+
+            border: 1px solid #d4e1d8;
+
+            background: white;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+            color: #40564c;
+
+        }
+
+
+        /* LOGIN */
+
+        .login {
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 13px;
+
+            color: #718179;
+
+        }
+
+
+        .login a {
+
+            color: #23865c;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width: 750px) {
+
+            .container {
+
+                width: 95%;
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .left {
+
+                display: none;
+
+            }
+
+
+            .right {
+
+                padding: 40px 30px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- LEFT SIDE -->
+
+    <div class="left">
+
+
+        <div class="logo">
+
+            rewear<span>.ai</span>
+
+        </div>
+
+
+        <h1>
+
+            Join the
+
+            <br>
+
+            <span>movement.</span>
+
+        </h1>
+
+
+        <p>
+
+            Buy less. Reuse more.
+            Give your wardrobe a second life
+            and help create a more sustainable future.
+
+        </p>
+
+
+        <div class="eco">
+
+            ♻️ 🌱 👕 🤝
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right">
+
+
+        <h2>
+            Create your account
+        </h2>
+
+
+        <p class="subtitle">
+
+            Join the ReWear AI community
+
+        </p>
+
+
+
+        <form
+            onsubmit="createAccount(event)"
+        >
+
+
+            <!-- NAME -->
+
+            <label>
+                Full Name
+            </label>
+
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+
+
+            <!-- EMAIL -->
+
+            <label>
+                Email address
+            </label>
+
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+
+            <!-- PASSWORD -->
+
+            <label>
+                Password
+            </label>
+
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                required
+            >
+
+
+
+            <!-- CONFIRM PASSWORD -->
+
+            <label>
+                Confirm Password
+            </label>
+
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm your password"
+                required
+            >
+
+
+
+            <!-- TERMS -->
+
+            <div class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                >
+
+                <span>
+
+                    I agree to the
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </span>
+
+            </div>
+
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="signup-btn"
+            >
+
+                Create Account
+
+            </button>
+
+
+        </form>
+
+
+
+        <!-- DIVIDER -->
+
+        <div class="divider">
+
+            OR
+
+        </div>
+
+
+
+        <!-- GOOGLE -->
+
+        <button
+            class="google"
+            onclick="googleSignup()"
+        >
+
+            G &nbsp; Sign up with Google
+
+        </button>
+
+
+
+        <!-- LOGIN -->
+
+        <p class="login">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+
+    </div>
+
+</div>
+
+
+
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const name = form.querySelector('input[type="text"]').value;
+    const email = form.querySelector('input[type="email"]').value;
+    const password = form.querySelectorAll('input[type="password"]')[0].value;
+    const confirmPassword = form.querySelectorAll('input[type="password"]')[1].value;
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Account created successfully!");
+        window.location.href = "login.html";
+      } else {
+        alert(data.message || "Could not create account.");
+      }
+
+    } catch (error) {
+      console.error(error);
+      alert("Could not connect to the server.");
+    }
+  });
+</script>
+
+</body>
+
+</html>
